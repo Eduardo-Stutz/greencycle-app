@@ -1,43 +1,43 @@
 @extends('layouts.main')
 
-@section('title', $event->title)
+@section('title', $product->title)
 
 @section ('content')
 
 <div class="col-md-10 offset-md-1">
     <div class="row">
         <div id="image-container" class="col-md-6">
-            <img src="/img/events/{{$event->image}}" class="image-fluid" alt="{{$event->title}}">
+            <img src="/img/products/{{$product->image}}" class="image-fluid" alt="{{$product->title}}">
         </div>
         <div id="info-container" class="col-md-6">
-            <h1>{{$event->title}}</h1>
-            <p class="event-city"><ion-icon name="location-outline"></ion-icon>{{$event->city}}</p>
-            <p class="events-participants"><ion-icon name="people-outline"></ion-icon> {{ count($event->users)}} Participante(s) </p>
-            <p class="event-owner"><ion-icon name="star-outline"></ion-icon>{{ $eventOwner['name'] }}</p>
+            <h1>{{$product->title}}</h1>
+            <p class="product-city"><ion-icon name="location-outline"></ion-icon>{{$product->city}}</p>
+            <p class="product-participants"><ion-icon name="people-outline"></ion-icon> {{ count($product->users)}} Favorito(s) </p>
+            <p class="product-owner"><ion-icon name="star-outline"></ion-icon>{{ $productOwner['name'] }}</p>
             @if (!$hasUserJoined)
-            <form action="/events/join/{{$event->id}}" method="POST">
+            <form action="/product/join/{{$product->id}}" method="POST">
             @csrf
-                 <a href="/events/join/{{$event->id}}" 
+                 <a href="/product/join/{{$product->id}}" 
             class="btn btn-primary" 
             id="event-submit"
-            onclick="event.preventDefault(); 
+            onclick="product.preventDefault(); 
             this.closest('form').submit();">
-            Confirmar Presença
+            Favorito
                 </a>
             </form>
             @else
-            <p class="already-joined-msg">Você já está participando deste evento.</p>
+            <p class="already-joined-msg">Você já favoritou este produto.</p>
             @endif
-            <h3>O evento conta com: </h3>
+            <h3>Categorias do produto: </h3>
             <ul id="items-list">
-                @foreach($event->items as $item)
+                @foreach($product->items as $item)
                     <li><ion-icon name="play-outline"></ion-icon><span>{{$item}}</span></li>
                 @endforeach
             </ul>
         </div>
         <div class="col-md-12" id="description-container">
-            <h3>Sobre o evento:</h3>
-            <p class="event-description">{{ $event->description }}</p>
+            <h3>Sobre o produto:</h3>
+            <p class="event-description">{{ $product->description }}</p>
         </div>
     </div>
 </div>

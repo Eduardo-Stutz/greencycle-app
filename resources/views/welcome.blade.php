@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'GreenCycle e-Waste')
+@section('title', 'GreenCycle Connect')
 
 @section ('content')
 
@@ -20,12 +20,12 @@
     <div id="cards-container" class="row">
         @foreach ($products as $product)
             <div class="card col-md-3">
-                <img src="/img/events/{{$product->image}}" alt="{$event->title}}">
+                <img src="/img/products/{{$product->image}}" alt="{$products->title}}">
                 <div class="card-body">
-                    <p class="card-date">{{date('d/m/y',strtotime($product->date))}}</p>
+                    <p class="card-date">{{ $product->created_at->format('d/m/y') }}</p>
                     <h5 class="card-title">{{$product->title}}</h5>
-                    <p class="card-participants">{{ count($product->users)}} Participantes</p>
-                    <a href="/events/{{$product->id}}" class="btn btn-primary">Saber mais</a>
+                    <p class="card-participants">{{ count($product->users)}} Favoritos</p>
+                    <a href="/products/{{$product->id}}" class="btn btn-primary">Ver detalhes</a>
                 </div>
             </div>
         @endforeach

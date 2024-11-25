@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('title')</title>
-
+        <!-- icon -->
+        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+        <!-- scripts -->
         <script src="/js/scripts.js"></script>
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/styles.css">
@@ -22,7 +24,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class= "collapse navbar-collapse" id="navbar">
                <a href="/" class="navbar-brand">
-                <img src="/img/hdcevents_logo.svg" alt="logo">
+                <img src="/img/GreenCycle.svg" alt="logo">
                </a> 
                <ul class="navbar-nav">
                 <li class="nav-item">
