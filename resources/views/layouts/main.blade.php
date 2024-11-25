@@ -6,7 +6,7 @@
 
         <title>@yield('title')</title>
         <!-- icon -->
-        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
         <!-- scripts -->
         <script src="/js/scripts.js"></script>
         <!-- CSS da aplicação -->

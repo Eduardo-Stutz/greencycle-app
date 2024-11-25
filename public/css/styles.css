@@ -46,9 +46,9 @@ header {
 .already-joined-msg {
 
     margin: 15px 0;
-    color:#f2a340;
-    background-color: #155724;
-    border: 1px solid #B8DAFF;
+    color:white;
+    background-color: #7fa051;
+    border: 1px solid #7fa051;
     padding:10px;
     width:275px;
 
@@ -195,7 +195,7 @@ header {
 
 #info-container ion-icon {
     font-size: 20px;
-    color: #f2a340;
+    color: #7fa051;
     margin-right: 5px;
 }
 
