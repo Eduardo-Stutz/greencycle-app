@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+        <img src="{{ asset('img/GreenCycle_login.png') }}" alt="Logo" class="w-[300px] h-auto">
         </x-slot>
 
         <x-validation-errors class="mb-4" />
