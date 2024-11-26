@@ -69,6 +69,8 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
        
+        $productOwner = $product->user;
+
         $user = auth()->user();
         $hasUserJoined= false;
 

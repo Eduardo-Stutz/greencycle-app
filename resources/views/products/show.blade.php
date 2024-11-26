@@ -11,7 +11,36 @@
         </div>
         <div id="info-container" class="col-md-6">
             <h1>{{$product->title}}</h1>
+            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $product->user->phone) }}" class="product-phone"
+                target="_blank">
+                <ion-icon name="call-outline"></ion-icon>
+                @if($product->user && $product->user->phone)
+                    {{ formatPhoneNumber($product->user->phone) }}
+                @else
+                    Número não disponível
+                @endif
+            </a>
+
+            <!-- Função para formatar o número -->
+            @php
+                function formatPhoneNumber($phone)
+                {
+                    // Remove todos os caracteres não numéricos
+                    $phone = preg_replace('/[^0-9]/', '', $phone);
+
+                    // Verifica se o número tem 11 dígitos (DDD + número)
+                    if (strlen($phone) == 11) {
+                        // Formata o número para (DDD) 9XXXX-XXXX
+                        return '(' . substr($phone, 0, 2) . ') ' . substr($phone, 2, 1) . substr($phone, 3, 4) . '-' . substr($phone, 7, 4);
+                    }
+                    // Caso o número tenha formato inválido ou não seja 11 dígitos, retorna o número sem formatação
+                    return $phone;
+                }
+            @endphp
             <p class="product-city"><ion-icon name="location-outline"></ion-icon>{{$product->city}}</p>
+            <p class="product-price"><ion-icon name="cash-outline"></ion-icon>R$
+                {{ number_format($product->price, 2, ',', '.') }}
+            </p>
             <p class="product-participants"><ion-icon name="people-outline"></ion-icon> {{ count($product->users)}}
                 Favorito(s) </p>
             <p class="product-owner"><ion-icon name="star-outline"></ion-icon>{{ $productOwner['name'] }}</p>

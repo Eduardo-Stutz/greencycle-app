@@ -67,12 +67,12 @@ class User extends Authenticatable
     }
 
     public function products(){
-        return $this->hasMany('App\Models\Product');
+        return $this->hasMany( Product::class);
     }
 
 
     public function productsAsParticipant(){
-        return $this-> belongsToMany('App\Models\Product');
+        return $this-> belongsToMany(Product::class);
     }
 
 }
