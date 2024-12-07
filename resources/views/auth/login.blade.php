@@ -3,7 +3,7 @@
         <x-slot name="logo">
         <img src="{{ asset('img/GreenCycle_login.png') }}" alt="Logo" class="w-[300px] h-auto">
         </x-slot>
-
+        @section('title', 'Login - Meu Aplicativo')
         <x-validation-errors class="mb-4" />
 
         @session('status')

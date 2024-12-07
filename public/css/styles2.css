@@ -1,0 +1,350 @@
+/* General */
+* {
+    font-family: 'Roboto';
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #a6d16c !important;
+    border: 2px solid #7fa051 !important; 
+}
+
+.btn-primary:hover {
+    background-color: #7fa051!important;
+    border-color: #7fa051 !important;
+}
+
+.msg {
+    background-color: #fff;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.already-joined-msg {
+
+    margin: 15px 0;
+    color:white;
+    background-color: #7fa051;
+    border: 1px solid #7fa051;
+    padding:10px;
+    width:275px;
+
+}
+
+/* navbar */
+#navbar {
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px, 0;
+}
+
+#navbar a {
+    font-size: 19px;
+    color: #a6d16c
+}
+
+#navbar a:hover {
+    color: #7fa051
+}
+
+/* search container */
+
+#search-container {
+    background-size: cover;
+    background-color: #155724;
+    background-position: center;
+    padding: 25px;
+    text-align: center;
+}
+
+#search-container h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* products list */
+
+#events-container {
+    padding: 25px;
+}
+
+#events-container h2 {
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle {
+    color: #757575;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+}
+
+#events-container .card {
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: .5px;
+}
+
+#events-container img {
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-date {
+    font-size: 12px;
+    color: #CCC;
+}
+
+.card .card-title {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-participants {
+    font-size: 14px;
+    color: #757575;
+}
+
+/* Products create page */
+
+#event-create-container {
+    padding: 30px
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    font-size: 12px;
+}
+
+/* products page */
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container h3,
+#description-container {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#description-container {
+    margin:30px;
+}
+
+#info-container ion-icon {
+    font-size: 20px;
+    color: #7fa051;
+    margin-right: 5px;
+}
+
+#info-container #event-submit {
+    margin: 20px 0;
+}
+
+#items-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li{
+    display:flex;
+}
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: relative;
+            /* Para posicionar o conteúdo dentro do header */
+            width: 100%;
+            /* O header ocupará toda a largura da página */
+            height: 450px;
+            /* Defina a altura desejada para o header */
+            overflow: hidden;
+            /* Garante que nada ultrapasse os limites */
+        }
+
+        .background-image {
+            position: absolute;
+            /* Faz a imagem preencher o header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* A imagem ocupa toda a largura do header */
+            height: 100%;
+            /* E toda a altura do header */
+            object-fit: cover;
+            /* Ajusta a imagem para preencher sem distorcer */
+            z-index: -1;
+            /* Coloca a imagem atrás do conteúdo do header */
+            display: block;
+            /* Evita problemas com imagens inline */
+        }
+
+        .overlay {
+            position: relative;
+            /* Mantém o overlay acima da imagem */
+            text-align: center;
+            color: white;
+            /* Ajuste a cor conforme necessário */
+            padding: 50px 20px;
+            /* Adiciona espaço interno ao conteúdo */
+        }
+
+
+        .tagline {
+            font-size: 1.5em;
+            color: #CDDC39;
+            margin-top: 10px;
+        }
+
+        .logo {
+            color: #8BC34A;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            color: #CDDC39;
+            margin-top: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #155724;
+            padding: 10px 0;
+            margin-top: 90px;
+
+        }
+
+        .nav a {
+            color: white;
+            background-color: #8BC34A;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            background-color: #7CB342;
+        }
+        .footer {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 30px;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .footer .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .footer .contact-info {
+            flex: 1;
+            text-align: center;
+            margin-right: 20px;
+        }
+        .footer .contact-info p {
+            margin: 5px 0;
+        }
+        .footer .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .footer .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .footer .social-icons a i {
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .contact-info, .footer .social-icons {
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+
+/* footer */
+
+/* footer {
+    text-align: center;
+    background-color: #353E48;
+    color: #FFF;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+} */

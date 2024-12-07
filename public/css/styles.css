@@ -96,7 +96,7 @@ header {
     margin: 0 auto;
 }
 
-/* events list */
+/* products list */
 
 #events-container {
     padding: 50px;
@@ -146,7 +146,7 @@ header {
     color: #757575;
 }
 
-/* Event create page */
+/* Products create page */
 
 #event-create-container {
     padding: 30px
@@ -162,7 +162,7 @@ header {
     font-size: 12px;
 }
 
-/* Event page */
+/* products page */
 #image-container,
 #info-container {
     margin-top: 30px;
