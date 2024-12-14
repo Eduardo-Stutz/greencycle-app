@@ -17,7 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Fontes do Google -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
@@ -34,21 +34,22 @@
         </div>
         </div>
         <div class="nav">
-            <a href="/" class="nav-link">Produtos</a>
-            <a href="/products/create" class="nav-link">Cadastrar produto</a>
+            <a href="https://greencycle.site" class="button">Portal GreenCycle</a>    
+            <a href="/" class="button">Produtos</a>
+            <a href="/products/create" class="button">Cadastrar produto</a>
             @auth
-                <a href="/dashboard" class="nav-link">Meus Produtos</a>
+                <a href="/dashboard" class="button">Meus Produtos</a>
                 <li>
                     <form action="/logout" method="POST">
                         @csrf
-                        <a href="/logout" class="nav-link" onclick="event.preventDefault();
+                        <a href="/logout" class="button" onclick="event.preventDefault();
                                             this.closest('form').submit();"> Sair</a>
                     </form>
                 </li>
             @endauth
             @guest
-                <a href="/login" class="nav-link">Entrar</a>
-                <a href="/register" class="nav-link">Cadastrar</a>
+                <a href="/login" class="button">Entrar</a>
+                <a href="/register" class="button">Cadastrar</a>
             @endguest
     </header>
     <main>
@@ -76,7 +77,7 @@
                 </p>
             </div>
             <div class="social-icons">
-                <a href="#">
+                <a href="https://www.instagram.com/greencycle.ba/">
                     <i class="fab fa-instagram">
                     </i>
                     SIGA-NOS NO INSTAGRAM

@@ -4,8 +4,8 @@
 
 @section ('content')
 
-<div class="col-md-10 offset-md-1 dashboard-title-container">
-    <h1>Meus Produtos</h1>
+<div style="margin-top:50px;" class="col-md-10 offset-md-1 dashboard-title-container">
+    <h1 style="color: #386641;">Meus Produtos</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-events-container">
     @if (count($products) > 0)
@@ -35,7 +35,7 @@
             </tbody>
         </table>
     @else
-        <h1>Você não cadastrou nenhum produto<a href="/products/create">Cadastrar produto</a></h1>
+        <h1 style="font-size: 20px;">Você não cadastrou nenhum produto <a href="/products/create">Cadastrar produto</a></h1>
 
     @endif
 
@@ -43,7 +43,7 @@
 
 </div>
 <div class="col-md-10 offset-md-1 dashboard-title-container">
-    <h1>Meus produtos favoritos</h1>
+    <h1 style="color: #386641;">Meus produtos favoritos</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-title-container">
     @if (count($productsAsParticipant) > 0)
@@ -78,7 +78,7 @@
             </tbody>
         </table>
     @else
-    <p>Você não tem nenhum produto. <a href="/">Ver todos os produtos</a></p>
+    <p style="margin-bottom:150px;">Você não tem nenhum produto. <a href="/">Ver todos os produtos</a></p>
     @endif
 </div>
 

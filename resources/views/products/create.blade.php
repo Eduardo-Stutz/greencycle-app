@@ -54,7 +54,7 @@
                 <input type="checkbox" name="items[]" value="Componentes de iluminação"> Componentes de iluminação
             </div>
         </div>
-        <input type="submit" class="btn btn-primary" value="Criar produto">
+        <input type="submit" class="btn btn-primary" value="Cadastrar Produto">
     </form>
 </div>
 
