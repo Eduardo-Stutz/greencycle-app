@@ -36,20 +36,23 @@
         <div class="nav">
             <a href="https://greencycle.site" class="button">Portal GreenCycle</a>    
             <a href="/" class="button">Produtos</a>
-            <a href="/products/create" class="button">Cadastrar produto</a>
+            <a href="/products/create" class="button">Anunciar produtos</a>
             @auth
                 <a href="/dashboard" class="button">Meus Produtos</a>
-                <li>
-                    <form action="/logout" method="POST">
+                <img style="margin-top:7px"  src="{{ asset('img/perfil.png') }}" alt="Imagem de perfil" class="profile-icon">
+                <span style="margin-top:7px" class="profile-name"><span style="color:#56AB2F">Usuário: </span>{{ Auth::user()->name }}</span>  
+                <li>  
+                <form action="/logout" method="POST">
                         @csrf
-                        <a href="/logout" class="button" onclick="event.preventDefault();
-                                            this.closest('form').submit();"> Sair</a>
+                        <a id="" href="/logout" class="button-sair" onclick="event.preventDefault();
+                                            this.closest('form').submit();"><ion-icon name="exit-outline"></ion-icon> Sair</a>
                     </form>
                 </li>
+                
             @endauth
             @guest
-                <a href="/login" class="button">Entrar</a>
-                <a href="/register" class="button">Cadastrar</a>
+                <a href="/login" class="button-login"><ion-icon name="log-out-outline"></ion-icon> Entrar</a>
+                <a href="/register" class="button-login"><ion-icon name="person-add-outline"></ion-icon> Cadastrar</a>
             @endguest
     </header>
     <main>

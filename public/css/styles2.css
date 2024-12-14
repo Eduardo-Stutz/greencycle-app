@@ -14,6 +14,20 @@ h1, h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+.profile-icon {
+    width: 30px; /* Defina o tamanho da imagem */
+    height: 30px;
+    border-radius: 50%; /* Para deixar a imagem redonda */
+    object-fit: cover; /* Mantém a proporção e evita distorção */
+    border: 1px solid;
+    border-color:#56AB2F;
+}
+
+.profile-name{
+    margin-left: 3px;
+    font-size: 20px;
+    color: #fff;
+}
 
 .row {
     margin: 0;
@@ -212,7 +226,6 @@ h1, h2 {
         html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
         }
 
         header {
@@ -281,7 +294,6 @@ h1, h2 {
 
         .nav a {
             color: white;
-            background-color: #8BC34A;
             padding: 10px 20px;
             margin: 0 10px;
             text-decoration: none;
@@ -289,9 +301,6 @@ h1, h2 {
             font-weight: bold;
         }
 
-        .nav a:hover {
-            background-color: #7CB342;
-        }
 /* footer */
 
         .footer {
@@ -371,3 +380,47 @@ h1, h2 {
             
         }
 
+
+        .button-sair {
+            margin-top:10px;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center; /* Alinha o ícone e o texto verticalmente */
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .button-sair ion-icon {
+            margin-right: 5px; /* Adiciona espaço entre o ícone e o texto */
+        }
+        
+        .button-sair:hover {
+            transform: scale(1.10); /* Grow effect */
+        }
+
+        /* botão de login*/
+
+        .button-login {
+            margin-top:10px;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center; /* Alinha o ícone e o texto verticalmente */
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .button-login ion-icon {
+            margin-right: 5px; /* Adiciona espaço entre o ícone e o texto */
+        }
+        
+        .button-login:hover {
+            transform: scale(1.10); /* Grow effect */
+        }
