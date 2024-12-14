@@ -3,6 +3,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#image-container img {
+    width: 100%; /* Define a largura para a imagem ocupar todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem sem distorções */
+    max-height: 500px; /* Define a altura máxima desejada para as imagens */
+    object-fit: flex; /* Para evitar cortes das imagens, cobre todo o container */
+}
+
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -364,17 +371,3 @@ h1, h2 {
             
         }
 
-/* footer */
-
-/* footer {
-    text-align: center;
-    background-color: #353E48;
-    color: #FFF;
-    padding: 30px;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin-bottom: 0;
-} */

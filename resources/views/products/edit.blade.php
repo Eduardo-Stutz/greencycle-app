@@ -9,7 +9,7 @@
     <form action="/products/update/{{$product->id}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <div class="form-group">
+        <div id="image-container" class="form-group">
             <label for="image">Imagem do produto:</label>
             <input type="file" id="image" name="image" class="form-control-file">
             <img src="/img/products/{{$product->image}}" alt="{{$product->title}}" class="img-preview">
