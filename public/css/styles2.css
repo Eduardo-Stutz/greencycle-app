@@ -234,7 +234,7 @@ h1, h2 {
             width: 100%;
             /* O header ocupará toda a largura da página */
             height: 450px;
-            /* Defina a altura desejada para o header */
+            /* Define a altura */
             overflow: hidden;
             /* Garante que nada ultrapasse os limites */
         }

@@ -1,18 +1,24 @@
-@extends('layouts.main')
+@extends('layouts.main') 
 
-@section('title', $product->title)
+@section('title', $product->title) 
+<!-- Define o título da página como o título do produto -->
 
-@section ('content')
+@section('content') 
 
-<div  class="col-md-10 offset-md-1">
+<div class="col-md-10 offset-md-1">
     <div class="row">
+        <!-- Container da imagem do produto -->
         <div id="image-container" class="col-md-6">
             <img src="/img/products/{{$product->image}}" class="image-fluid" alt="{{$product->title}}">
         </div>
+
+        <!-- Informações detalhadas do produto -->
         <div id="info-container" class="col-md-6">
             <h1>{{$product->title}}</h1>
-            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $product->user->phone) }}" class="product-phone"
-                target="_blank">
+            
+            <!-- Link para contato via WhatsApp -->
+            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $product->user->phone) }}" 
+               class="product-phone" target="_blank">
                 <ion-icon name="call-outline"></ion-icon>
                 @if($product->user && $product->user->phone)
                     {{ formatPhoneNumber($product->user->phone) }}
@@ -21,29 +27,33 @@
                 @endif
             </a>
 
-            <!-- Função para formatar o número -->
             @php
+                // Função para formatar o número de telefone no formato padrão brasileiro
                 function formatPhoneNumber($phone)
                 {
-                    // Remove todos os caracteres não numéricos
                     $phone = preg_replace('/[^0-9]/', '', $phone);
-
-                    // Verifica se o número tem 11 dígitos (DDD + número)
                     if (strlen($phone) == 11) {
-                        // Formata o número para (DDD) 9XXXX-XXXX
                         return '(' . substr($phone, 0, 2) . ') ' . substr($phone, 2, 1) . substr($phone, 3, 4) . '-' . substr($phone, 7, 4);
                     }
-                    // Caso o número tenha formato inválido ou não seja 11 dígitos, retorna o número sem formatação
                     return $phone;
                 }
             @endphp
-            <p class="product-city"><ion-icon name="location-outline"></ion-icon>{{$product->city}}</p>
-            <p class="product-price"><ion-icon name="cash-outline"></ion-icon>R$
-                {{ number_format($product->price, 2, ',', '.') }}
+
+            <!-- Informações adicionais do produto -->
+            <p class="product-city">
+                <ion-icon name="location-outline"></ion-icon>{{$product->city}}
             </p>
-            <p class="product-participants"><ion-icon name="people-outline"></ion-icon> {{ count($product->users)}}
-                Favorito(s) </p>
-            <p class="product-owner"><ion-icon name="star-outline"></ion-icon>{{ $productOwner['name'] }}</p>
+            <p class="product-price">
+                <ion-icon name="cash-outline"></ion-icon>R$ {{ number_format($product->price, 2, ',', '.') }}
+            </p>
+            <p class="product-participants">
+                <ion-icon name="people-outline"></ion-icon> {{ count($product->users)}} Favorito(s)
+            </p>
+            <p class="product-owner">
+                <ion-icon name="person-circle-outline"></ion-icon>{{ $productOwner['name'] }}
+            </p>
+
+            <!-- Botão para favoritar ou mensagem de já favoritado -->
             @if (!$hasUserJoined)
                 <form action="/products/join/{{$product->id}}" method="POST">
                     @csrf
@@ -55,6 +65,8 @@
             @else
                 <p class="already-joined-msg">Você já favoritou este produto.</p>
             @endif
+
+            <!-- Lista de categorias do produto -->
             <h3>Categorias do produto: </h3>
             <ul id="items-list">
                 @foreach($product->items as $item)
@@ -62,6 +74,8 @@
                 @endforeach
             </ul>
         </div>
+
+        <!-- Descrição do produto -->
         <div class="col-md-12" id="description-container">
             <h3>Sobre o produto:</h3>
             <p class="event-description">{{ $product->description }}</p>
