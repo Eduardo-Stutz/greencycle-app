@@ -1,9 +1,9 @@
+<title>{{ config('app_name', '') }} - @yield('title', 'Login') </title>
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
         <img src="{{ asset('img/GreenCycle_login.png') }}" alt="Logo" class="w-[300px] h-auto">
         </x-slot>
-        @section('title', 'Login - Meu Aplicativo')
         <x-validation-errors class="mb-4" />
 
         @session('status')

@@ -1,4 +1,4 @@
-
+<title>{{ config('app_name', '') }} - @yield('title', 'Cadastrar-se') </title>
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
